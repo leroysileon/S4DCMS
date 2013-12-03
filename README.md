@@ -1,6 +1,8 @@
-LIKE A BOSSSSSSS
+LIKE A BOSSSSSSS!
 
 
-my first commit.
+my first commit!
 
-Theo was here.
+Theo was here!
+
+!
