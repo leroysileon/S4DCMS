@@ -1,0 +1,9 @@
+<h2>Pagina's</h2>
+
+<input ng-model="query" placeholder="Type to start searching..." />
+
+<ul>
+	<li data-ng-repeat="page in pages.doc | filter:query"><a href="/#/pages/{{page._id}}">{{page.title}}</a></li>
+</ul>
+
+<button type="button" data-ng-click="save()">Nieuwe Pagina</button>

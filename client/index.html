@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html data-ng-app="myApp">
+<head>
+	<meta charset="utf-8">
+	<title>Kanon CMS</title>
+	
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+	<link rel="stylesheet" href="./css/core.css" />
+</head>
+<body>
+
+<header>
+	<div id="leftFlag"></div>
+	<a href="" id="logo"></a>
+	<div id="logoFlag"></div>
+	<div id="rightFlag"></div>
+</header>
+
+<aside>
+	<ul>
+		<li><a href="../#/pages">Pagina's</a></li>
+		<li><a href="../#/blogs">Blogposts</a></li>
+	</ul>
+</aside>
+
+<section>
+
+	<h1><a href="/">Kanon CMS</a></h1>
+	
+	
+	
+	<div data-ng-view=""></div>
+
+</section>
+
+<!-- Lib -->
+<script src="./javascripts/lib/angular.min.js"></script>
+<script src="./javascripts/lib/angular-resource.min.js"></script>
+
+<!-- App -->
+<script src="./javascripts/app.js"></script>
+<script src="./javascripts/controllers.js"></script>
+<script src="./javascripts/services.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+<h2>Blog's</h2>
+
+<input ng-model="query" placeholder="Type to start searching..." />
+
+<ul>
+	<li data-ng-repeat="blog in blogs.doc | filter:query"><a href="/#/blogs/{{blog._id}}">{{blog.title}}</a></li>
+</ul>
+
+<button type="button" data-ng-click="save()">Nieuw blog</button>

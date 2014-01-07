@@ -1,0 +1,16 @@
+<h2>Page</h2>
+
+
+<form name="pageForm">
+
+    <p>Id: <input type="text" data-ng-model="pages.doc._id" readonly="" /></p>
+    
+    <p>Titel: <input type="text" data-ng-model="pages.doc.title" /></p>
+    
+    <p>Omschrijving: <textarea data-ng-model="pages.doc.description"></textarea></p>
+
+    <button type="button" data-ng-click="delete()">Verwijderen</button>
+
+    <button type="button" data-ng-click="save()">Opslaan</button>
+
+</form>

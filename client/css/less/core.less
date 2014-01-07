@@ -1,0 +1,139 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600,700);
+
+@titles: 'Open Sans', sans-serif;
+@body: 'Open Sans', sans-serif;
+
+/*==COLORS=========================*/
+@white: #fff;
+@black: #000;
+
+/*==MIXINS=========================*/
+.transition(@property, @duration, @timing, @delay) {
+	transition: @property @duration @timing @delay;
+	-moz-transition: @property @duration @timing @delay; 
+	-webkit-transition: @property @duration @timing @delay;
+	-o-transition: @property @duration @timing @delay; 
+}
+.rounded-corners (@radius: 5px) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius: 	@radius;
+	-ms-border-radius: @radius;
+	-o-border-radius: @radius;
+	border-radius: @radius;
+}
+.skew (@xdeg, @ydeg) {
+	transform: skew(@xdeg, @ydeg);
+	-ms-transform: skew(@xdeg, @ydeg);
+	-webkit-transform: skew(@xdeg, @ydeg);
+}
+
+
+
+/*==CORE=========================*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 400;
+	font-family: @titles;
+}
+* {
+	box-sizing: border-box;
+}
+body, html {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+}
+body {
+	font-family: @body;
+	font-size: 16px;
+	line-height: 30px;
+	background-color: @white;
+}
+
+header {
+	position: absolute;
+	top: 0;
+	
+	#leftFlag, #logoFlag, #rightFlag {
+		position: absolute;
+		height: 70px;
+		.skew(0deg,-8deg);
+	}
+	#leftFlag {
+		top: 50px;
+		width: 120px;
+		background-color: #e7a220;
+		z-index: 100;
+	}
+	#logo {
+		top: 48px;
+		left: 155px;
+		display: block;
+		position: absolute;
+		width: 122px;
+		height: 40px;
+		background-image: url('../images/kanonLogo.svg');
+		background-position: center center;
+		background-size: 122px 40px;
+		background-repeat: no-repeat;
+		z-index: 210;
+		opacity: 0.6;
+		.transition(all, 0.2s, ease-in, 0s);
+		&:hover {
+			opacity: 1;
+			.transition(all, 0.2s, ease-in, 0s);
+		}
+	}
+	#logoFlag {
+		left: 115px;
+		top: 34px;
+		width: 200px;
+		background-color: #f9b12a;
+		z-index: 200;
+	}
+	#rightFlag {
+		top: -23px;
+		left: 310px;
+		width: 700px;
+		background-color: #e7a220;
+		z-index: 100;
+	}
+}
+aside {
+	padding-top: 140px;
+	display: inline-block;
+	overflow: auto;
+	float: left;
+	width: 120px;
+	height: 100%;
+	background-color: #e5e5e5;
+	ul {
+		display: block;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		li {
+			a {
+				display: block;
+				height: 100px;
+				&:hover {
+					background-color: lighten(@black, 80%);
+				}
+			}
+		}
+	}
+}
+section {
+	padding-top: 140px;
+	display: inline-block;
+	float: left;
+	width: auto;
+	height: 100%;
+	background-image: url(../images/cmsBg.jpg);
+	background-repeat: no-repeat;
+	background-position: bottom left;
+}
